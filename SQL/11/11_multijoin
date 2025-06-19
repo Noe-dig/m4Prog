@@ -1,0 +1,5 @@
+select naam, count(DV.MBs), sum(SMSV.aantalpaginas), sum(timestampdiff(second, GS.startdatum, GS.einddatum)) as totaleTijd from tel_klant TK 
+join tel_dataverbruik DV on TK.id=DV.klant_id
+join tel_smsverbruik SMSV on TK.id=SMSV.klant_id
+join tel_gesprekken GS on TK.id=GS.klant_id
+group by naam;
