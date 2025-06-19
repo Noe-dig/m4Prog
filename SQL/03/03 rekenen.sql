@@ -1,1 +1,2 @@
-SELECT sum(leeftijd) FROM `huisdieren`
+SELECT sum(leeftijd) FROM `huisdierendata`;
+
